@@ -7,7 +7,7 @@ import android.view.SubMenu;
 import android.view.View;
 
 /**
- * Created by Administrator on 2016/8/3.
+ * Created by Brian on 2016/8/3.
  */
 public class PlusActionProvider extends ActionProvider {
     /**
@@ -30,35 +30,40 @@ public class PlusActionProvider extends ActionProvider {
     @Override
     public void onPrepareSubMenu(SubMenu subMenu){
         subMenu.clear();
-        subMenu.add("群聊").setIcon(R.mipmap.ofm_group_chat_icon).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+        subMenu.add(context.getString(R.string.action_group_chat)).setIcon(R.mipmap.ofm_group_chat_icon)
+                .setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 return true;
             }
         });
 
-        subMenu.add("添加朋友").setIcon(R.mipmap.ofm_add_icon).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+        subMenu.add(context.getString(R.string.action_add_friends)).setIcon(R.mipmap.ofm_add_icon)
+                .setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 return true;
             }
         });
 
-        subMenu.add("视频聊天").setIcon(R.mipmap.ofm_video_icon).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+        subMenu.add(context.getString(R.string.action_video)).setIcon(R.mipmap.ofm_video_icon)
+                .setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 return true;
             }
         });
 
-        subMenu.add("扫一扫").setIcon(R.mipmap.ofm_qrcode_icon).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+        subMenu.add(R.string.action_scan).setIcon(R.mipmap.ofm_qrcode_icon)
+                .setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 return true;
             }
         });
 
-        subMenu.add("收付款").setIcon(R.mipmap.ofm_card_icon).setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+        subMenu.add(context.getString(R.string.action_card)).setIcon(R.mipmap.ofm_card_icon)
+                .setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
             @Override
             public boolean onMenuItemClick(MenuItem item) {
                 return true;

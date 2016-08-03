@@ -3,4 +3,13 @@
     <string name="action_settings">设置</string>
     <string name="action_search" >Search</string>
     <string name="action_plus">更多</string>
+    <string name="action_add_friends">添加朋友</string>
+    <string name="action_group_chat">群聊</string>
+    <string name="action_video">视频聊天</string>
+    <string name="action_scan">扫一扫</string>
+    <string name="action_card">收付款</string>
+    <string name="action_album">我的相册</string>
+    <string name="action_collection">我的收藏</string>
+    <string name="action_feed">帮助与反馈</string>
+
 </resources>

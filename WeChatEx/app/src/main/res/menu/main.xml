@@ -18,11 +18,11 @@
     <item
         android:id="@+id/action_album"
         android:icon="@mipmap/ofm_photo_icon"
-        android:title="我的相册" />
+        android:title="@string/action_album" />
 
     <item android:id="@+id/action_collection"
         android:icon="@mipmap/ofm_collect_icon"
-        android:title="我的收藏" />
+        android:title="@string/action_collection" />
 
     <item
         android:id="@+id/action_settings"
@@ -32,6 +32,6 @@
 
     <item android:id="@+id/action_feed"
         android:icon="@mipmap/ofm_feedback_icon"
-        android:title="帮助与反馈" />
+        android:title="@string/action_feed" />
 
 </menu>
