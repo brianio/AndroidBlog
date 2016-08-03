@@ -1,21 +1,19 @@
 package com.brianio.actionbarex;
 
-import android.os.Bundle;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Bundle;
 import android.os.Process;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.ShareActionProvider;
 import android.widget.Toast;
 
 
-public class MainActivity extends Activity implements OnClickListener {
+public class MainActivity extends Activity {
 
     //
     private ShareActionProvider provider;
@@ -25,12 +23,12 @@ public class MainActivity extends Activity implements OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setTitle("ACTGo");
-        setContentView(R.layout.activity_main);
+        setTitle("ACBGo");
+//        setContentView(R.layout.activity_main);
 
         ActionBar actionBar=getActionBar();
 //        actionBar.setDisplayHomeAsUpEnabled(true);
-//        actionBar.setDisplayShowHomeEnabled(false);
+        actionBar.setDisplayShowHomeEnabled(false);
 
         Log.d(TAG, "MAIN thread id is :" + Thread.currentThread().getId());
         Log.d(TAG, "Process id is " + Process.myPid());
@@ -49,39 +47,6 @@ public class MainActivity extends Activity implements OnClickListener {
                 .setText(R.string.album)
                 .setTabListener(new TabListener<AlbumFragment>(this,"album",AlbumFragment.class));
         actionBar.addTab(tab1);
-
-    }
-
-    @Override
-    public void onClick(View v) {
-
-//        switch (v.getId()) {
-//
-//            case R.id.btn_first:
-//                Intent intent = new Intent(this, FirstActivity.class);
-//                startActivity(intent);
-//                break;
-//
-//            case R.id.start_service:
-//                Intent startIntent = new Intent(this, MyService.class);
-//                startService(startIntent);
-//                break;
-//            case R.id.stop_service:
-//                Intent stopIntent = new Intent(this, MyService.class);
-//                stopService(stopIntent);
-//                break;
-//            //开始这个连接
-//            case R.id.bind_service:
-//                Intent bindIntent = new Intent(this, MyService.class);
-//                bindService(bindIntent, sConnection, BIND_AUTO_CREATE);
-//                break;
-//            //解开这个连接
-//            case R.id.unbind_service:
-//                unbindService(sConnection);
-//                break;
-//            default:
-//                break;
-//        }
 
     }
 
@@ -105,9 +70,8 @@ public class MainActivity extends Activity implements OnClickListener {
 //            }
 //        });
         MenuItem itemShare = menu.findItem(R.id.action_share);
-        provider = (ShareActionProvider) itemShare.getActionProvider();
-//        provider.setShareHistoryFileName(ShareActionProvider.DEFAULT_SHARE_HISTORY_FILE_NAME);
-        provider.setShareIntent(getDefaultIntent());
+//        provider = (ShareActionProvider) itemShare.getActionProvider();
+//        provider.setShareIntent(getDefaultIntent());
 
 
         return super.onCreateOptionsMenu(menu);
