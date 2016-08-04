@@ -1,6 +1,6 @@
 #AndroidBlog
 
-Android的模块练习项目
+Android的模块训练项目
 
 ##ActionBarEx
 
