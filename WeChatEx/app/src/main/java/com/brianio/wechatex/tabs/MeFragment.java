@@ -1,7 +1,9 @@
 package com.brianio.wechatex.tabs;
 
-import android.app.Fragment;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.util.DisplayMetrics;
+import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,11 +17,13 @@ import android.widget.TextView;
 public class MeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        DisplayMetrics dm=getResources().getDisplayMetrics();
         TextView textView = new TextView(getActivity());
         textView.setText("我");
-        textView.setGravity(Gravity.CENTER_HORIZONTAL);
+        textView.setGravity(Gravity.CENTER);
+        textView.setTextSize(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP,6,dm));
         LinearLayout layout = new LinearLayout(getActivity());
-        ViewGroup.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        ViewGroup.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.MATCH_PARENT);
         layout.addView(textView, params);
         return layout;
     }
