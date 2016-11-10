@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">ViewTrianEx</string>
+    <string name="grid_icon_name">GridVewIcon</string>
+    <string name="btn_grid_icon">GridView</string>
+    <string name="btn_listview">ListView</string>
+    <string name="spinner_one_title">请选择您的段位</string>
+    <string name="spinner_two_title">请选择您的英雄</string>
+    <string name="spinner_one_des">英雄列表</string>
+    <string name="btn_spinner">Spinner</string>
+    <string name="btn_txview">AutoTxView</string>
+    <item name="Tag_APP" type="id"></item>
+    <item name="Tag_BOOK" type="id"></item>
+</resources>

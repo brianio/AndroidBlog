@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="6dp"
+    android:paddingLeft="6dp"
+    android:layout_margin="10dp"
+    tools:context="com.geelaro.viewtrianex.MainActivity">
+
+    <Button
+        android:id="@+id/btn_grid_icon"
+        style="@style/app_btn"
+        android:text="@string/btn_grid_icon"/>
+
+    <Button
+        android:id="@+id/btn_list"
+        style="@style/app_btn"
+        android:text="@string/btn_listview"/>
+    <Button
+        android:id="@+id/btn_spinner"
+        style="@style/app_btn"
+        android:text="@string/btn_spinner"/>
+
+    <Button
+        android:id="@+id/btn_auto_txview"
+        style="@style/app_btn"
+        android:text="@string/btn_txview"/>
+
+
+</LinearLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.geelaro.viewtrianex">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".viewact.GridActivity"
+            android:label="@string/grid_icon_name"
+            android:parentActivityName=".MainActivity">
+        </activity>
+
+        <activity android:name=".viewact.ListViewActivity" >
+        </activity>
+
+        <activity android:name=".viewact.SpinnerActivity" >
+        </activity>
+
+        <activity android:name=".viewact.AutoTextViewActivity" >
+        </activity>
+    </application>
+
+</manifest>
