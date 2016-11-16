@@ -13,8 +13,6 @@ import com.geelaro.viewtrianex.viewact.SpinnerActivity;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
-//    private final static int TYPE_APP = 0;
-//    private final static int TYPE_BOOK = 1;
 
     private final static String TAG="MainActivity";
     private Button btnToGridView; //
