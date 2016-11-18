@@ -8,6 +8,7 @@
     <string name="spinner_one_des">英雄列表</string>
     <string name="btn_spinner">Spinner</string>
     <string name="btn_txview">AutoTxView</string>
+    <string name="btn_flipper">ViewFilpper</string>
     <item name="Tag_APP" type="id"></item>
     <item name="Tag_BOOK" type="id"></item>
 </resources>

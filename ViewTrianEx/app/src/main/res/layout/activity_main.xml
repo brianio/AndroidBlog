@@ -29,5 +29,10 @@
         style="@style/app_btn"
         android:text="@string/btn_txview"/>
 
+    <Button
+        android:id="@+id/btn_flipper"
+        style="@style/app_btn"
+        android:text="@string/btn_flipper" />
+
 
 </LinearLayout>

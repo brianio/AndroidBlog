@@ -5,8 +5,13 @@
     android:layout_height="match_parent">
 
     <ImageView
+        android:id="@+id/img_child"
         android:layout_width="match_parent"
         android:layout_height="60dp" />
 
+    <TextView
+        android:id="@+id/tv_child"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 </LinearLayout>

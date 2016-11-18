@@ -28,6 +28,9 @@
 
         <activity android:name=".viewact.AutoTextViewActivity" >
         </activity>
+
+        <activity android:name=".viewact.ViewFlipperActivity" >
+        </activity>
     </application>
 
 </manifest>
