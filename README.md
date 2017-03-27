@@ -9,3 +9,15 @@ ActionBar
 ## WeChatEx
 
 参考郭神博客，模仿实现微信主界面，其中滑动部分使用了开源项目 [PagerSlidingTabStrip](https://github.com/astuetz/PagerSlidingTabStrip) , 感谢astuetz的开源。 
+
+## ViewTrianEx
+
+Android View 类练习Demo
+
+## MySQLite
+
+Android 数据库SQLite 类练习Demo
+
+## LayoutEx
+
+Android Layout 布局Demo
