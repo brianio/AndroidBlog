@@ -3,7 +3,6 @@ package com.geelaro.viewtrianex.viewact;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.widget.ViewFlipper;
 
@@ -27,11 +26,11 @@ public class ViewFlipperActivity extends AppCompatActivity {
         vflp=(ViewFlipper)findViewById(R.id.vflp_help);
         vflp.startFlipping();
 
-        float x=getResources().getDisplayMetrics().xdpi;
-        float y=getResources().getDisplayMetrics().ydpi;
-
-        Log.d("Xdpi", "is :"+x);
-        Log.d("Ydpi", "is :"+y);
+//        float x=getResources().getDisplayMetrics().xdpi;
+//        float y=getResources().getDisplayMetrics().ydpi;
+//
+//        Log.d("Xdpi", "is :"+x);
+//        Log.d("Ydpi", "is :"+y);
 
 
     }

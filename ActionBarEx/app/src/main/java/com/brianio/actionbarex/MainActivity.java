@@ -70,8 +70,8 @@ public class MainActivity extends Activity {
 //            }
 //        });
         MenuItem itemShare = menu.findItem(R.id.action_share);
-//        provider = (ShareActionProvider) itemShare.getActionProvider();
-//        provider.setShareIntent(getDefaultIntent());
+        provider = (ShareActionProvider) itemShare.getActionProvider();
+        provider.setShareIntent(getDefaultIntent());
 
 
         return super.onCreateOptionsMenu(menu);

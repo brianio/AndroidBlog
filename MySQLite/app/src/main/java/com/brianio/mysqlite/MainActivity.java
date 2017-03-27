@@ -31,6 +31,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         SQLiteOpenHelper dbHelper=new MySQLite(this,"demo2.db",null,3);
         SQLiteDatabase db=dbHelper.getWritableDatabase();
 
+//        Intent intent=new Intent(Intent.ACTION_VIEW);
+//        intent.setData(Uri.parse("http://www.google.com"));
+//        startActivity(intent);
+
         //LitePal 方法
 //        SQLiteDatabase db = Connector.getDatabase();
 
