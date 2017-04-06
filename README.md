@@ -21,3 +21,7 @@ Android 数据库SQLite 类练习Demo
 ## LayoutEx
 
 Android Layout 布局Demo
+
+## BroadcastRev
+
+Android BroadcastReceiver, 包括创建、注册、发送（普通广播、有序广播），和本地传播的注册和发送。
