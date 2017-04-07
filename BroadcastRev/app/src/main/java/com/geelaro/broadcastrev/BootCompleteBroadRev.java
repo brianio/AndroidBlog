@@ -10,12 +10,13 @@ import static android.content.ContentValues.TAG;
 
 /**
  * Created by Lee on 2017/4/6.
+ *  开启时，无需启动app就可以接收开机广播
  */
 
 public class BootCompleteBroadRev extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         Toast.makeText(context," Boot complete.",Toast.LENGTH_SHORT).show();
-        Log.d(TAG, "onReceive: Boot complete.");
+//        Log.d(TAG, "onReceive: Boot complete.");
     }
 }

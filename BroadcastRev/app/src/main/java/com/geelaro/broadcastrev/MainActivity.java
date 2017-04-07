@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     /**NetworkReceiver
      * 网络发生变化时，系统发出广播，onReceive()工作
      */
-    static class NetworkReceiver extends BroadcastReceiver {
+    public static class NetworkReceiver extends BroadcastReceiver {
 
         @Override
         public void onReceive(Context context, Intent intent) {
