@@ -25,3 +25,7 @@ Android Layout 布局Demo
 ## BroadcastRev
 
 Android BroadcastReceiver, 包括创建、注册、发送（普通广播、有序广播），和本地传播的注册和发送。
+
+## BroadcastRevLogin
+
+BroadcastReceiver实践项目：通过广播机制，强制账户下线的功能.
