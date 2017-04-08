@@ -26,6 +26,14 @@
     </TableRow>
 
     <TableRow>
+        <CheckBox
+            android:id="@+id/remember_password"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_height="wrap_content"
+            android:text="@string/remember_pw"/>
+    </TableRow>
+    <TableRow>
         <Button
             android:id="@+id/btn_login"
             android:layout_height="wrap_content"

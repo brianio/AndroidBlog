@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">BroadcastRevLogin</string>
+    <string name="remember_pw">Remember Password</string>
 </resources>
