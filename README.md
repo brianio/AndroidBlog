@@ -29,3 +29,6 @@ Android BroadcastReceiver, 包括创建、注册、发送（普通广播、有�
 ## BroadcastRevLogin
 
 BroadcastReceiver实践项目：通过广播机制，强制账户下线的功能.
+
+## DataStore
+Android 数据存储方案：File、SharedPreferences和SQLite
