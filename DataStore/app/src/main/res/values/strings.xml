@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">DataStore</string>
+    <string name="save_data">SaveData</string>
+    <string name="restore_data">RestoreData</string>
+    <string name="remember_pw">Remember Password</string>
+    <string name="create_db">Create DB</string>
+</resources>
