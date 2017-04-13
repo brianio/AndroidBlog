@@ -44,6 +44,14 @@
         android:id="@+id/btn_replace_data"
         style="@style/btn_data"
         android:text="Replace Data" />
+    <Button
+        android:id="@+id/btn_get_contacts"
+        style="@style/btn_data"
+        android:text="Get Contacts" />
+    <Button
+        android:id="@+id/btn_get_books"
+        style="@style/btn_data"
+        android:text="Get Books" />
 
     <TextView
         android:id="@+id/tv_display"

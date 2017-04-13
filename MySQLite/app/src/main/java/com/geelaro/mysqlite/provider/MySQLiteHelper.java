@@ -1,4 +1,4 @@
-package com.brianio.mysqlite;
+package com.geelaro.mysqlite.provider;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -8,24 +8,26 @@ import android.util.Log;
 /**
  * Created by Administrator on 2016/8/11.
  */
-public class MySQLite extends SQLiteOpenHelper {
+public class MySQLiteHelper extends SQLiteOpenHelper {
 
-    private static final String TAG="MySQLite";
+    private static final String TAG = "MySQLite";
 
     //创建一个新表news,其中title，context,publishdate，commentcount分别表示新闻标题、内容、发布时间和评论数。
-    public static final String CREAT_NEWS="create table news("
-            +"id integer primary key autoincrement,"
-            +"title text,"
-            +"context text,"
-            +"publishdate integer,"
-            +"commnetcount integer)";
-    public static final String CREAT_COMMENT="create table comments("
-            +"id integer primary key autoincrement,"
-            +"context text,"
-            +"publishdate integer )";
+    public static final String CREAT_NEWS = "create table news("
+            + "id integer primary key autoincrement,"
+            + "title text,"
+            + "context text,"
+            + "publishdate integer,"
+            + "commentcount integer)";
+    public static final String CREAT_COMMENT = "create table comments("
+            + "id integer primary key autoincrement,"
+            + "context text,"
+            + "publishdate integer )";
+    public static final String DB_NAME = "media.db";
+    public static final int DB_VERSION = 1;
 
-    public MySQLite(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
-        super(context, name, factory, version);
+    public MySQLiteHelper(Context context) {
+        super(context, DB_NAME, null, DB_VERSION);
     }
 
     @Override
@@ -39,7 +41,7 @@ public class MySQLite extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        switch (oldVersion){
+        switch (oldVersion) {
             case 1:
                 db.execSQL(CREAT_COMMENT);
                 Log.d(TAG, "Upgrade: Create Table Comments");

@@ -1,6 +1,7 @@
 package com.geelaro.datastore;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -12,6 +13,10 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.geelaro.datastore.data.BookDbHelper;
+import com.geelaro.datastore.provider.ReadBook;
+import com.geelaro.datastore.provider.ReadContacts;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private Button saveData;
@@ -53,9 +58,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         queryData = (Button) findViewById(R.id.btn_query_data);
         queryData.setOnClickListener(this);
         //replace 数据
-        Button replaceData=(Button)findViewById(R.id.btn_replace_data);
+        Button replaceData = (Button) findViewById(R.id.btn_replace_data);
         replaceData.setOnClickListener(this);
-
+        //
+        Button getContacts = (Button) findViewById(R.id.btn_get_contacts);
+        getContacts.setOnClickListener(this);
+        //
+        Button getBooks=(Button)findViewById(R.id.btn_get_books);
+        getBooks.setOnClickListener(this);
 
     }
 
@@ -103,11 +113,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 DbAction.deleteData(dbHelper);
                 break;
             case R.id.btn_query_data:
-                tvDisplay.setText(DbAction.queryData(dbHelper));
-
+                tvDisplay.setText(DbAction.queryData(dbHelper).toString());
                 break;
             case R.id.btn_replace_data:
                 DbAction.replaceData(dbHelper);
+                break;
+            case R.id.btn_get_contacts:
+                Intent intent = new Intent(this, ReadContacts.class);
+                startActivity(intent);
+                break;
+            case R.id.btn_get_books:
+                Intent bookIntent = new Intent(this, ReadBook.class);
+                startActivity(bookIntent);
                 break;
             default:
                 break;
@@ -160,15 +177,16 @@ class DbAction {
     static void deleteData(BookDbHelper bookDbHelper) {
         SQLiteDatabase db = bookDbHelper.getWritableDatabase();
 //        db.delete("book", "pages>?", new String[]{"500"});
-        db.delete("book",null,null);
+        db.delete("book", null, null);
     }
 
     /**
      * query data from SQLite
      */
-    static String queryData(BookDbHelper bookDbHelper) {
+    static ArrayList<String> queryData(BookDbHelper bookDbHelper) {
         SQLiteDatabase db = bookDbHelper.getWritableDatabase();
         String results = "";
+        ArrayList<String> resultList = new ArrayList<>();
         Cursor cursor = db.query("book", null, null, null, null, null, null);
         if (cursor.moveToFirst()) {
             do {
@@ -178,25 +196,26 @@ class DbAction {
                 double price = cursor.getDouble(cursor.getColumnIndex("price"));
                 results = title + "-" + author + "-" + pages + "-" + price;
                 Log.d("QueryData", ": " + results);
-
+                resultList.add(results + "\n");
             } while (cursor.moveToNext());
         }
 
         cursor.close();
-        return results;
+        return resultList;
     }
+
     /**
      * replace data / beginTransaction()
      */
-    static void replaceData(BookDbHelper bookDbHelper){
-        SQLiteDatabase db=bookDbHelper.getWritableDatabase();
+    static void replaceData(BookDbHelper bookDbHelper) {
+        SQLiteDatabase db = bookDbHelper.getWritableDatabase();
         db.beginTransaction();//开启事务
         try{
             db.delete("book",null,null);
-            if (true){
-                //在这里手动抛出一个异常，让事务失败
-                throw new NullPointerException();
-            }
+//            if (true){
+//                //在这里手动抛出一个异常，让事务失败
+//                throw new NullPointerException();
+//            }
 
             ContentValues values = new ContentValues();
             //添加第一条数据
@@ -207,9 +226,9 @@ class DbAction {
             db.insert("book", null, values); // 插入数据
             db.setTransactionSuccessful();//事务已经执行成功
 
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             db.endTransaction();//结束事务
         }
     }

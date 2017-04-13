@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.geelaro.datastore">
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <permission android:name="com.geelaro.datastore.READ" android:protectionLevel="normal" />
 
     <application
         android:allowBackup="true"
@@ -18,6 +20,15 @@
         </activity>
         <activity android:name=".MainActivity" >
         </activity>
+        <activity android:name=".provider.ReadContacts" >
+        </activity>
+        <activity android:name=".provider.ReadBook"></activity>
+        <provider
+            android:authorities="com.geelaro.datastore"
+            android:name=".provider.BookProvider"
+            android:readPermission="com.geelaro.datastore.READ"
+            android:exported="true" >
+        </provider>
     </application>
 
 </manifest>

@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">ViewTrianEx</string>
+    <string name="listview_name">ListView</string>
+    <string name="spinner_name">Spinner</string>
+    <string name="autotextview_name">AutoTextView</string>
+    <string name="flipper_name">ViewFlipper</string>
+    <string name="webview_name">Web</string>
     <string name="grid_icon_name">GridVewIcon</string>
     <string name="btn_grid_icon">GridView</string>
     <string name="btn_listview">ListView</string>
@@ -9,6 +14,7 @@
     <string name="btn_spinner">Spinner</string>
     <string name="btn_txview">AutoTxView</string>
     <string name="btn_flipper">ViewFilpper</string>
+    <string name="btn_webview">WebView</string>
     <item name="Tag_APP" type="id"></item>
     <item name="Tag_BOOK" type="id"></item>
 </resources>

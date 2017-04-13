@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.brianio.mysqlite">
+    package="com.geelaro.mysqlite">
+
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <permission android:name="com.geelaro.mysqlite.READ" android:protectionLevel="normal"/>
 
     <application
         android:name="org.litepal.LitePalApplication"
@@ -16,6 +19,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".ContactsData"
+            android:label="Contacts">
+        </activity>
+        
+        <provider
+            android:authorities="com.geelaro.mysqlite"
+            android:name=".provider.MyDataProvider"
+            android:readPermission="com.geelaro.mysqlite.READ"
+            android:exported="true">
+        </provider>
     </application>
 
 </manifest>

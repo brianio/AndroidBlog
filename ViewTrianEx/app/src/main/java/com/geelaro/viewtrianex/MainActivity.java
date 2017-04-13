@@ -14,6 +14,7 @@ import com.geelaro.viewtrianex.viewact.GridActivity;
 import com.geelaro.viewtrianex.viewact.ListViewActivity;
 import com.geelaro.viewtrianex.viewact.SpinnerActivity;
 import com.geelaro.viewtrianex.viewact.ViewFlipperActivity;
+import com.geelaro.viewtrianex.viewact.WebViewActivity;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -25,6 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnToSpinner;
     private Button btnToAutoTxView;
     private Button btnToViewFilpper;
+    private Button btnToWebView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,12 +44,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnToSpinner=(Button)findViewById(R.id.btn_spinner);
         btnToAutoTxView=(Button)findViewById(R.id.btn_auto_txview);
         btnToViewFilpper=(Button)findViewById(R.id.btn_flipper);
+        btnToWebView=(Button)findViewById(R.id.btn_webview);
 
         btnToGridView.setOnClickListener(this);
         btnToListView.setOnClickListener(this);
         btnToSpinner.setOnClickListener(this);
         btnToAutoTxView.setOnClickListener(this);
         btnToViewFilpper.setOnClickListener(this);
+        btnToWebView.setOnClickListener(this);
     }
 
     /**
@@ -76,10 +80,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_flipper:
                 Intent vflpIntent=new Intent(this, ViewFlipperActivity.class);
                 startActivity(vflpIntent);
+                break;
+            case R.id.btn_webview:
+                Intent webIntent=new Intent(this,WebViewActivity.class);
+                startActivity(webIntent);
+                break;
             default:
                 break;
         }
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

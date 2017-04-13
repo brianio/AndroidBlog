@@ -1,4 +1,4 @@
-package com.brianio.mysqlite;
+package com.geelaro.mysqlite;
 
 import org.junit.Test;
 
