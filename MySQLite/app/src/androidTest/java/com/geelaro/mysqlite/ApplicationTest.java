@@ -1,4 +1,4 @@
-package com.brianio.mysqlite;
+package com.geelaro.mysqlite;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

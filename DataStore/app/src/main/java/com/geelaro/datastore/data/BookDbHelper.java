@@ -22,7 +22,8 @@ public class BookDbHelper extends SQLiteOpenHelper {
             + BookStore.BookEntry.AUTHOR_NAME + " text,"
             + BookStore.BookEntry.BOOK_PRICE + " real,"
             + BookStore.BookEntry.PAGES_NUM + " integer,"
-            + BookStore.BookEntry.BOOK_NAME + " text);";
+            + BookStore.BookEntry.BOOK_NAME + " text,"
+            + BookStore.BookEntry.CATEGORY_ID + " integer);";
     //新增一个表category，表中有ID、categoryName、categoryCode.同时数据库version+1
     final String CREATE_TABLE_CATEGORY = "create table " + BookStore.CategoryEntry.TABLE_NAME + "("
             + BookStore.CategoryEntry.COLUMNS_CAT_KEY + " integer primary key autoincrement,"
@@ -31,7 +32,7 @@ public class BookDbHelper extends SQLiteOpenHelper {
 
     public BookDbHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
-        mContext=context;
+        mContext = context;
     }
 
     @Override
@@ -39,18 +40,25 @@ public class BookDbHelper extends SQLiteOpenHelper {
 
         db.execSQL(CREATE_TABLE_BOOK);
         db.execSQL(CREATE_TABLE_CATEGORY);
-        Toast.makeText(mContext,"Database is created successful",Toast.LENGTH_SHORT).show();
+        Toast.makeText(mContext, "Database is created successful", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int oldVersion, int newVersion) {
-        sqLiteDatabase.execSQL("drop table if exists " + BookStore.BookEntry.TABLE_NAME);
-        sqLiteDatabase.execSQL("drop table if exists " + BookStore.CategoryEntry.TABLE_NAME);
-        onCreate(sqLiteDatabase);
-//        switch (oldVersion){
-//            case 1:
-//                sqLiteDatabase.execSQL(CREATE_TABLE_CATEGORY);
-//            default:
-//        }
+//        sqLiteDatabase.execSQL("drop table if exists " + BookStore.BookEntry.TABLE_NAME);
+//        sqLiteDatabase.execSQL("drop table if exists " + BookStore.CategoryEntry.TABLE_NAME);
+//        onCreate(sqLiteDatabase);
+        switch (oldVersion) {
+            case 1:
+                sqLiteDatabase.execSQL(CREATE_TABLE_CATEGORY);
+
+                switch (oldVersion) {
+                    case 1:
+                        sqLiteDatabase.execSQL(CREATE_TABLE_CATEGORY);
+                    case 2:
+                        sqLiteDatabase.execSQL("alter table book add column category_id integer");
+                    default:
+                }
+        }
     }
 }
