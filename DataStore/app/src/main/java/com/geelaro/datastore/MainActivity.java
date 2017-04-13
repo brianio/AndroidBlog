@@ -193,10 +193,10 @@ class DbAction {
         db.beginTransaction();//开启事务
         try{
             db.delete("book",null,null);
-            if (true){
-                //在这里手动抛出一个异常，让事务失败
-                throw new NullPointerException();
-            }
+//            if (true){
+//                //在这里手动抛出一个异常，让事务失败
+//                throw new NullPointerException();
+//            }
 
             ContentValues values = new ContentValues();
             //添加第一条数据

@@ -44,13 +44,13 @@ public class BookDbHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int oldVersion, int newVersion) {
-        sqLiteDatabase.execSQL("drop table if exists " + BookStore.BookEntry.TABLE_NAME);
-        sqLiteDatabase.execSQL("drop table if exists " + BookStore.CategoryEntry.TABLE_NAME);
-        onCreate(sqLiteDatabase);
-//        switch (oldVersion){
-//            case 1:
-//                sqLiteDatabase.execSQL(CREATE_TABLE_CATEGORY);
-//            default:
-//        }
+//        sqLiteDatabase.execSQL("drop table if exists " + BookStore.BookEntry.TABLE_NAME);
+//        sqLiteDatabase.execSQL("drop table if exists " + BookStore.CategoryEntry.TABLE_NAME);
+//        onCreate(sqLiteDatabase);
+        switch (oldVersion){
+            case 1:
+                sqLiteDatabase.execSQL(CREATE_TABLE_CATEGORY);
+            default:
+        }
     }
 }

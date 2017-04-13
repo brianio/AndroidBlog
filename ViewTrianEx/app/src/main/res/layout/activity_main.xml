@@ -33,6 +33,10 @@
         android:id="@+id/btn_flipper"
         style="@style/app_btn"
         android:text="@string/btn_flipper" />
+    <Button
+        android:id="@+id/btn_webview"
+        style="@style/app_btn"
+        android:text="@string/btn_webview" />
 
 
 </LinearLayout>

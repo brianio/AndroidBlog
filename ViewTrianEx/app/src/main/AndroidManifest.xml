@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.geelaro.viewtrianex">
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -20,16 +21,23 @@
             android:parentActivityName=".MainActivity">
         </activity>
 
-        <activity android:name=".viewact.ListViewActivity" >
+        <activity android:name=".viewact.ListViewActivity"
+            android:label="@string/listview_name">
         </activity>
 
-        <activity android:name=".viewact.SpinnerActivity" >
+        <activity android:name=".viewact.SpinnerActivity"
+            android:label="@string/spinner_name">
         </activity>
 
-        <activity android:name=".viewact.AutoTextViewActivity" >
+        <activity android:name=".viewact.AutoTextViewActivity"
+            android:label="@string/autotextview_name" >
         </activity>
 
-        <activity android:name=".viewact.ViewFlipperActivity" >
+        <activity android:name=".viewact.ViewFlipperActivity"
+            android:label="@string/flipper_name">
+        </activity>
+        <activity android:name=".viewact.WebViewActivity"
+             android:label="@string/webview_name">
         </activity>
     </application>
 
