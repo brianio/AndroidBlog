@@ -13,13 +13,14 @@ import com.geelaro.viewtrianex.viewact.AutoTextViewActivity;
 import com.geelaro.viewtrianex.viewact.GridActivity;
 import com.geelaro.viewtrianex.viewact.ListViewActivity;
 import com.geelaro.viewtrianex.viewact.SpinnerActivity;
+import com.geelaro.viewtrianex.viewact.SqliteListActivity;
 import com.geelaro.viewtrianex.viewact.ViewFlipperActivity;
 import com.geelaro.viewtrianex.viewact.WebViewActivity;
 
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private final static String TAG="MainActivity";
+    private final static String TAG = "MainActivity";
     //跳转按钮
     private Button btnToGridView;
     private Button btnToListView;
@@ -27,6 +28,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnToAutoTxView;
     private Button btnToViewFilpper;
     private Button btnToWebView;
+<<<<<<< HEAD
+=======
+    private Button btnSqliteListView;
+>>>>>>> 3ec1e9c85e62039460d9b285c6b6ac8f3184ddbf
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,14 +42,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     //初始化
-    private void init(){
+    private void init() {
 
+<<<<<<< HEAD
         btnToGridView=(Button)findViewById(R.id.btn_grid_icon);
         btnToListView=(Button)findViewById(R.id.btn_list);
         btnToSpinner=(Button)findViewById(R.id.btn_spinner);
         btnToAutoTxView=(Button)findViewById(R.id.btn_auto_txview);
         btnToViewFilpper=(Button)findViewById(R.id.btn_flipper);
         btnToWebView=(Button)findViewById(R.id.btn_webview);
+=======
+        btnToGridView = (Button) findViewById(R.id.btn_grid_icon);
+        btnToListView = (Button) findViewById(R.id.btn_list);
+        btnToSpinner = (Button) findViewById(R.id.btn_spinner);
+        btnToAutoTxView = (Button) findViewById(R.id.btn_auto_txview);
+        btnToViewFilpper = (Button) findViewById(R.id.btn_flipper);
+        btnToWebView = (Button) findViewById(R.id.btn_webview);
+        btnSqliteListView = (Button) findViewById(R.id.btn_sqlite);
+>>>>>>> 3ec1e9c85e62039460d9b285c6b6ac8f3184ddbf
 
         btnToGridView.setOnClickListener(this);
         btnToListView.setOnClickListener(this);
@@ -52,39 +67,53 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnToAutoTxView.setOnClickListener(this);
         btnToViewFilpper.setOnClickListener(this);
         btnToWebView.setOnClickListener(this);
+<<<<<<< HEAD
+=======
+        btnSqliteListView.setOnClickListener(this);
+>>>>>>> 3ec1e9c85e62039460d9b285c6b6ac8f3184ddbf
     }
 
     /**
-     * @Funcation  跳转到不同的view类
+     * @Funcation 跳转到不同的view类
      * @Author geelaro
      */
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.btn_grid_icon:
-                Intent gridIntent=new Intent(this,GridActivity.class);
+                Intent gridIntent = new Intent(this, GridActivity.class);
                 startActivity(gridIntent);
                 break;
             case R.id.btn_list:
-                Intent listIntent=new Intent(this, ListViewActivity.class);
+                Intent listIntent = new Intent(this, ListViewActivity.class);
                 startActivity(listIntent);
                 break;
             case R.id.btn_spinner:
-                Intent spinnerIntent=new Intent(this, SpinnerActivity.class);
+                Intent spinnerIntent = new Intent(this, SpinnerActivity.class);
                 startActivity(spinnerIntent);
                 break;
             case R.id.btn_auto_txview:
-                Intent tvIntent=new Intent(this, AutoTextViewActivity.class);
+                Intent tvIntent = new Intent(this, AutoTextViewActivity.class);
                 startActivity(tvIntent);
                 break;
             case R.id.btn_flipper:
-                Intent vflpIntent=new Intent(this, ViewFlipperActivity.class);
+                Intent vflpIntent = new Intent(this, ViewFlipperActivity.class);
                 startActivity(vflpIntent);
                 break;
             case R.id.btn_webview:
+<<<<<<< HEAD
                 Intent webIntent=new Intent(this,WebViewActivity.class);
                 startActivity(webIntent);
                 break;
+=======
+                Intent webIntent = new Intent(this, WebViewActivity.class);
+                startActivity(webIntent);
+                break;
+            case R.id.btn_sqlite:
+                Intent sqliteIntent = new Intent(this, SqliteListActivity.class);
+                startActivity(sqliteIntent);
+                break;
+>>>>>>> 3ec1e9c85e62039460d9b285c6b6ac8f3184ddbf
             default:
                 break;
         }
@@ -93,8 +122,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater Inflater=new MenuInflater(this);
-        Inflater.inflate(R.menu.main,menu);
+        MenuInflater Inflater = new MenuInflater(this);
+        Inflater.inflate(R.menu.main, menu);
         return super.onCreateOptionsMenu(menu);
     }
 

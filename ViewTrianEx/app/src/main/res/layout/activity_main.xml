@@ -37,6 +37,14 @@
         android:id="@+id/btn_webview"
         style="@style/app_btn"
         android:text="@string/btn_webview" />
+<<<<<<< HEAD
+=======
+    <Button
+        android:id="@+id/btn_sqlite"
+        style="@style/app_btn"
+        android:text="@string/btn_sqlite" />
+
+>>>>>>> 3ec1e9c85e62039460d9b285c6b6ac8f3184ddbf
 
 
 </LinearLayout>

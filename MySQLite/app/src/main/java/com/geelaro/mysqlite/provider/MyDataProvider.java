@@ -33,6 +33,7 @@ public class MyDataProvider extends ContentProvider {
     private static final UriMatcher sUriMatch = new UriMatcher(UriMatcher.NO_MATCH);
 
     static {
+<<<<<<< HEAD
         sUriMatch.addURI("media", "news", NEWS);
         sUriMatch.addURI("media", "news/#", NEWS_ID);
         sUriMatch.addURI("media", "news/#/title", NEWS_TITLE);
@@ -44,6 +45,19 @@ public class MyDataProvider extends ContentProvider {
         sUriMatch.addURI("media", "comments/#", COMMENTS_ID);
         sUriMatch.addURI("media", "comments/#/context", COMMENTS_CONTEXT);
         sUriMatch.addURI("media", "comments/#/publishdate", COMMENTS_PUBLISHDATE);
+=======
+        sUriMatch.addURI(MediaContract.CONTENT_AUTHORITY, "news", NEWS);
+        sUriMatch.addURI(MediaContract.CONTENT_AUTHORITY, "news/#", NEWS_ID);
+        sUriMatch.addURI(MediaContract.CONTENT_AUTHORITY, "news/#/title", NEWS_TITLE);
+//        sUriMatch.addURI(MediaContract.CONTENT_AUTHORITY, "news/#/context", NEWS_CONTEXT);
+//        sUriMatch.addURI(MediaContract.CONTENT_AUTHORITY, "news/#/publishdate", NEWS_PUBLISH);
+//        sUriMatch.addURI(MediaContract.CONTENT_AUTHORITY, "new/#/commentcount", NEWS_COMMENTSCOUNT);
+
+        sUriMatch.addURI(MediaContract.CONTENT_AUTHORITY, "comments", COMMENTS);
+        sUriMatch.addURI(MediaContract.CONTENT_AUTHORITY, "comments/#", COMMENTS_ID);
+//        sUriMatch.addURI(MediaContract.CONTENT_AUTHORITY, "comments/#/context", COMMENTS_CONTEXT);
+//        sUriMatch.addURI(MediaContract.CONTENT_AUTHORITY, "comments/#/publishdate", COMMENTS_PUBLISHDATE);
+>>>>>>> 3ec1e9c85e62039460d9b285c6b6ac8f3184ddbf
 
 
     }
@@ -60,9 +74,20 @@ public class MyDataProvider extends ContentProvider {
         SQLiteDatabase db = dbHelper.getWritableDatabase();
         Cursor cursor = null;
         switch (sUriMatch.match(uri)) {
+<<<<<<< HEAD
             case NEWS_TITLE:
                 cursor = db.query(MediaContract.NewsEntry.TABLE_NAME, projection, selection, selectionArgs, sortOrder, null, null);
                 break;
+=======
+            case NEWS:
+                cursor = db.query(MediaContract.NewsEntry.TABLE_NAME, projection, selection, selectionArgs, sortOrder, null, null);
+                break;
+            case NEWS_ID:
+                cursor=db.query(MediaContract.NewsEntry.TABLE_NAME,projection,"id=?",new String[]{"1"},null,null,sortOrder);
+                break;
+            default:
+                throw new IllegalArgumentException("Error Uri: " + uri);
+>>>>>>> 3ec1e9c85e62039460d9b285c6b6ac8f3184ddbf
         }
         return cursor;
     }

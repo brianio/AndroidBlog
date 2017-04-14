@@ -15,6 +15,10 @@
     <string name="btn_txview">AutoTxView</string>
     <string name="btn_flipper">ViewFilpper</string>
     <string name="btn_webview">WebView</string>
+<<<<<<< HEAD
+=======
+    <string name="btn_sqlite">SQLite</string>
+>>>>>>> 3ec1e9c85e62039460d9b285c6b6ac8f3184ddbf
     <item name="Tag_APP" type="id"></item>
     <item name="Tag_BOOK" type="id"></item>
 </resources>

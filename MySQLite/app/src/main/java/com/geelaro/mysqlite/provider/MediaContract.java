@@ -4,6 +4,7 @@ import android.content.ContentResolver;
 import android.net.Uri;
 import android.provider.BaseColumns;
 
+<<<<<<< HEAD
 import java.util.Date;
 
 /**
@@ -19,12 +20,26 @@ public class MediaContract {
     // generated getters and setters.
 
     public static final String CONTENT_AUTHORITY = "com.geelaro.mysqlite";
+=======
+/**
+ * Created by Lee on 2016/8/12.
+ */
+public class MediaContract {
+    // generated getters and setters.
+    public static final String CONTENT_AUTHORITY = "com.geelaro.mysqlite.media";
+>>>>>>> 3ec1e9c85e62039460d9b285c6b6ac8f3184ddbf
     //
     public static final Uri BASE_CONTENT_URI = Uri.parse("content://" + CONTENT_AUTHORITY);
     //
     public static final String PATH_NEWS = "news";
     public static final String PATH_COMMENT = "comment";
 
+<<<<<<< HEAD
+=======
+    /*Default sort order*/
+    public static final String DEFAULT_SORT_ORDER = "_id asc";
+
+>>>>>>> 3ec1e9c85e62039460d9b285c6b6ac8f3184ddbf
     /**
      *
      */
@@ -54,7 +69,11 @@ public class MediaContract {
      *
      */
     public static final class CommentEntry implements BaseColumns {
+<<<<<<< HEAD
 
+=======
+        /*Content URI*/
+>>>>>>> 3ec1e9c85e62039460d9b285c6b6ac8f3184ddbf
         public static final Uri CONTENT_URI =
                 BASE_CONTENT_URI.buildUpon().appendPath(PATH_COMMENT).build();
 
