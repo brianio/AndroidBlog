@@ -37,11 +37,20 @@
         android:id="@+id/btn_webview"
         style="@style/app_btn"
         android:text="@string/btn_webview" />
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> 0fc02281fb84eb8fa6f8baa93b76467c84c1a2e4
     <Button
         android:id="@+id/btn_sqlite"
         style="@style/app_btn"
         android:text="@string/btn_sqlite" />
 
+<<<<<<< HEAD
+=======
+>>>>>>> 3ec1e9c85e62039460d9b285c6b6ac8f3184ddbf
+>>>>>>> 0fc02281fb84eb8fa6f8baa93b76467c84c1a2e4
 
 
 </LinearLayout>

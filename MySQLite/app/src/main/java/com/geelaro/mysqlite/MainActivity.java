@@ -53,6 +53,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.create_db:
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                Log.d(TAG, "Create New db");
+=======
+>>>>>>> 3ec1e9c85e62039460d9b285c6b6ac8f3184ddbf
+>>>>>>> 0fc02281fb84eb8fa6f8baa93b76467c84c1a2e4
                 //传统建表方法
                 dbHelper.getWritableDatabase();
                 addData();

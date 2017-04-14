@@ -28,7 +28,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnToAutoTxView;
     private Button btnToViewFilpper;
     private Button btnToWebView;
+<<<<<<< HEAD
     private Button btnSqliteListView;
+=======
+<<<<<<< HEAD
+=======
+    private Button btnSqliteListView;
+>>>>>>> 3ec1e9c85e62039460d9b285c6b6ac8f3184ddbf
+>>>>>>> 0fc02281fb84eb8fa6f8baa93b76467c84c1a2e4
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +48,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //初始化
     private void init() {
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+        btnToGridView=(Button)findViewById(R.id.btn_grid_icon);
+        btnToListView=(Button)findViewById(R.id.btn_list);
+        btnToSpinner=(Button)findViewById(R.id.btn_spinner);
+        btnToAutoTxView=(Button)findViewById(R.id.btn_auto_txview);
+        btnToViewFilpper=(Button)findViewById(R.id.btn_flipper);
+        btnToWebView=(Button)findViewById(R.id.btn_webview);
+=======
+>>>>>>> 0fc02281fb84eb8fa6f8baa93b76467c84c1a2e4
         btnToGridView = (Button) findViewById(R.id.btn_grid_icon);
         btnToListView = (Button) findViewById(R.id.btn_list);
         btnToSpinner = (Button) findViewById(R.id.btn_spinner);
@@ -48,6 +66,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnToViewFilpper = (Button) findViewById(R.id.btn_flipper);
         btnToWebView = (Button) findViewById(R.id.btn_webview);
         btnSqliteListView = (Button) findViewById(R.id.btn_sqlite);
+<<<<<<< HEAD
+=======
+>>>>>>> 3ec1e9c85e62039460d9b285c6b6ac8f3184ddbf
+>>>>>>> 0fc02281fb84eb8fa6f8baa93b76467c84c1a2e4
 
         btnToGridView.setOnClickListener(this);
         btnToListView.setOnClickListener(this);
@@ -55,7 +77,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnToAutoTxView.setOnClickListener(this);
         btnToViewFilpper.setOnClickListener(this);
         btnToWebView.setOnClickListener(this);
+<<<<<<< HEAD
         btnSqliteListView.setOnClickListener(this);
+=======
+<<<<<<< HEAD
+=======
+        btnSqliteListView.setOnClickListener(this);
+>>>>>>> 3ec1e9c85e62039460d9b285c6b6ac8f3184ddbf
+>>>>>>> 0fc02281fb84eb8fa6f8baa93b76467c84c1a2e4
     }
 
     /**
@@ -86,6 +115,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(vflpIntent);
                 break;
             case R.id.btn_webview:
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                Intent webIntent=new Intent(this,WebViewActivity.class);
+                startActivity(webIntent);
+                break;
+=======
+>>>>>>> 0fc02281fb84eb8fa6f8baa93b76467c84c1a2e4
                 Intent webIntent = new Intent(this, WebViewActivity.class);
                 startActivity(webIntent);
                 break;
@@ -93,6 +130,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent sqliteIntent = new Intent(this, SqliteListActivity.class);
                 startActivity(sqliteIntent);
                 break;
+<<<<<<< HEAD
+=======
+>>>>>>> 3ec1e9c85e62039460d9b285c6b6ac8f3184ddbf
+>>>>>>> 0fc02281fb84eb8fa6f8baa93b76467c84c1a2e4
             default:
                 break;
         }

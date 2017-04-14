@@ -2,7 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.geelaro.viewtrianex">
     <uses-permission android:name="android.permission.INTERNET" />
+<<<<<<< HEAD
     <uses-permission android:name="com.geelaro.mysqlite.READ" />
+=======
+<<<<<<< HEAD
+=======
+    <uses-permission android:name="com.geelaro.mysqlite.READ" />
+>>>>>>> 3ec1e9c85e62039460d9b285c6b6ac8f3184ddbf
+>>>>>>> 0fc02281fb84eb8fa6f8baa93b76467c84c1a2e4
 
     <application
         android:allowBackup="true"
@@ -39,9 +46,18 @@
         </activity>
         <activity android:name=".viewact.WebViewActivity"
              android:label="@string/webview_name">
+<<<<<<< HEAD
         </activity>
         <activity android:name=".viewact.SqliteListActivity"
             android:label="@string/btn_sqlite" >
+=======
+<<<<<<< HEAD
+=======
+        </activity>
+        <activity android:name=".viewact.SqliteListActivity"
+            android:label="@string/btn_sqlite" >
+>>>>>>> 3ec1e9c85e62039460d9b285c6b6ac8f3184ddbf
+>>>>>>> 0fc02281fb84eb8fa6f8baa93b76467c84c1a2e4
         </activity>
     </application>
 
