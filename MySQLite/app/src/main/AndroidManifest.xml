@@ -24,7 +24,7 @@
         </activity>
         
         <provider
-            android:authorities="com.geelaro.mysqlite"
+            android:authorities="com.geelaro.mysqlite.media"
             android:name=".provider.MyDataProvider"
             android:readPermission="com.geelaro.mysqlite.READ"
             android:exported="true">

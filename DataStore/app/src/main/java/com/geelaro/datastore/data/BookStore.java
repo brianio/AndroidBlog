@@ -6,6 +6,9 @@ package com.geelaro.datastore.data;
 
 public class BookStore {
 
+    /*Authority*/
+    public static final String AUTHORITY = "com.geelaro.datastore.book";
+
     public static class BookEntry{
         //
         public static final String TABLE_NAME="book";

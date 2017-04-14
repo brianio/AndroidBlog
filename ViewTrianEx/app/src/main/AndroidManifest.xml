@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.geelaro.viewtrianex">
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.geelaro.mysqlite.READ" />
 
     <application
         android:allowBackup="true"
@@ -38,6 +39,9 @@
         </activity>
         <activity android:name=".viewact.WebViewActivity"
              android:label="@string/webview_name">
+        </activity>
+        <activity android:name=".viewact.SqliteListActivity"
+            android:label="@string/btn_sqlite" >
         </activity>
     </application>
 
