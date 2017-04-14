@@ -4,26 +4,20 @@ import android.content.ContentResolver;
 import android.net.Uri;
 import android.provider.BaseColumns;
 
-import java.util.Date;
-
 /**
- * Created by Brian on 2016/8/12.
+ * Created by Lee on 2016/8/12.
  */
 public class MediaContract {
-    private int id;
-    private String title;
-    private String context;
-    private Date publishdate;
-    private int commentcount;
-
     // generated getters and setters.
-
-    public static final String CONTENT_AUTHORITY = "com.geelaro.mysqlite";
+    public static final String CONTENT_AUTHORITY = "com.geelaro.mysqlite.media";
     //
     public static final Uri BASE_CONTENT_URI = Uri.parse("content://" + CONTENT_AUTHORITY);
     //
     public static final String PATH_NEWS = "news";
     public static final String PATH_COMMENT = "comment";
+
+    /*Default sort order*/
+    public static final String DEFAULT_SORT_ORDER = "_id asc";
 
     /**
      *
@@ -54,7 +48,7 @@ public class MediaContract {
      *
      */
     public static final class CommentEntry implements BaseColumns {
-
+        /*Content URI*/
         public static final Uri CONTENT_URI =
                 BASE_CONTENT_URI.buildUpon().appendPath(PATH_COMMENT).build();
 

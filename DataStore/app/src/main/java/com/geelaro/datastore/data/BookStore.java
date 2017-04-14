@@ -17,6 +17,9 @@ public class BookStore {
     public static final String PATH_CATEGORY = "category";
     //
 
+    /*Authority*/
+    public static final String AUTHORITY = "com.geelaro.datastore.book";
+
     public static class BookEntry{
         //
         public static final Uri CONTENT_URI =
