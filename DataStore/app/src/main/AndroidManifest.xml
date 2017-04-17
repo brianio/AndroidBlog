@@ -24,7 +24,7 @@
         </activity>
         <activity android:name=".provider.ReadBook"></activity>
         <provider
-            android:authorities="com.geelaro.datastore"
+            android:authorities="com.geelaro.datastore.book"
             android:name=".provider.BookProvider"
             android:readPermission="com.geelaro.datastore.READ"
             android:exported="true" >

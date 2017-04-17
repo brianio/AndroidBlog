@@ -48,28 +48,12 @@ public class BookDbHelper extends SQLiteOpenHelper {
 //        sqLiteDatabase.execSQL("drop table if exists " + BookStore.BookEntry.TABLE_NAME);
 //        sqLiteDatabase.execSQL("drop table if exists " + BookStore.CategoryEntry.TABLE_NAME);
 //        onCreate(sqLiteDatabase);
-<<<<<<< HEAD
         switch (oldVersion) {
             case 1:
                 sqLiteDatabase.execSQL(CREATE_TABLE_CATEGORY);
 
-                switch (oldVersion) {
-                    case 1:
-                        sqLiteDatabase.execSQL(CREATE_TABLE_CATEGORY);
-                    case 2:
-                        sqLiteDatabase.execSQL("alter table book add column category_id integer");
-                    default:
-                }
-=======
-        switch (oldVersion){
-            case 1:
-                sqLiteDatabase.execSQL(CREATE_TABLE_CATEGORY);
             default:
-<<<<<<< HEAD
->>>>>>> 347db2c... update on 20170413
-=======
->>>>>>> 3ec1e9c85e62039460d9b285c6b6ac8f3184ddbf
->>>>>>> 0fc02281fb84eb8fa6f8baa93b76467c84c1a2e4
+                break;
         }
     }
 }
