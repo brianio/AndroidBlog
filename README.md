@@ -14,7 +14,9 @@ ActionBar
 
 Android View 类练习Demo
 
-#### 1. 通过ContentProvider使用其他应用数据
+#### 1. 初识ListView、RecycleView、WebView、GirdView、Spinner、ScrollView
+
+#### 2. 通过ContentProvider使用其他应用数据
 MySQLite应用提供的ContentProvider
 
 ```
@@ -85,3 +87,7 @@ BroadcastReceiver实践项目：通过广播机制，强制账户下线的功能
 
 ## DataStore
 Android 数据存储方案：File、SharedPreferences和SQLite
+
+## NotifyWork
+
+Android 通知栏Notification学习
