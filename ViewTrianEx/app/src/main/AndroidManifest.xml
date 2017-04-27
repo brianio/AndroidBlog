@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.geelaro.viewtrianex">
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="com.geelaro.mysqlite.READ" />
     <uses-permission android:name="com.geelaro.mysqlite.READ" />
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ic_view_quilt_black_48dp"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -18,32 +19,40 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".viewact.GridActivity"
+        <activity
+            android:name=".viewactvities.GridActivity"
             android:label="@string/grid_icon_name"
             android:parentActivityName=".MainActivity">
         </activity>
-
-        <activity android:name=".viewact.ListViewActivity"
+        <activity
+            android:name=".viewactvities.ListViewActivity"
             android:label="@string/listview_name">
         </activity>
-
-        <activity android:name=".viewact.SpinnerActivity"
+        <activity
+            android:name=".viewactvities.SpinnerActivity"
             android:label="@string/spinner_name">
         </activity>
-
-        <activity android:name=".viewact.AutoTextViewActivity"
-            android:label="@string/autotextview_name" >
+        <activity
+            android:name=".viewactvities.AutoTextViewActivity"
+            android:label="@string/autotextview_name">
         </activity>
-
-        <activity android:name=".viewact.ViewFlipperActivity"
+        <activity
+            android:name=".viewactvities.ViewFlipperActivity"
             android:label="@string/flipper_name">
         </activity>
-        <activity android:name=".viewact.WebViewActivity"
-             android:label="@string/webview_name">
-
+        <activity
+            android:name=".viewactvities.WebViewActivity"
+            android:label="@string/webview_name">
         </activity>
-        <activity android:name=".viewact.SqliteListActivity"
-            android:label="@string/btn_sqlite" >
+        <activity
+            android:name=".viewactvities.SqliteListActivity"
+            android:label="@string/btn_sqlite">
+        </activity>
+        <activity android:name=".viewactvities.RecycleViewActivity"
+            android:label="@string/btn_recycle_view">
+        </activity>
+        <activity android:name=".viewactvities.DetailActivity"
+            android:label="@string/detail_view" >
         </activity>
     </application>
 

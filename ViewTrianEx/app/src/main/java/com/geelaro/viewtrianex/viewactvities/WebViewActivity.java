@@ -1,4 +1,4 @@
-package com.geelaro.viewtrianex.viewact;
+package com.geelaro.viewtrianex.viewactvities;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;

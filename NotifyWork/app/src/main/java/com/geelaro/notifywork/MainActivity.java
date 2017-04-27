@@ -5,14 +5,14 @@ import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.NotificationCompat;
 import android.view.View;
 import android.widget.Button;
 
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,19 +20,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
         //
-        Button btnNotify=(Button)findViewById(R.id.send_notice);
+        Button btnNotify = (Button) findViewById(R.id.send_notice);
         btnNotify.setOnClickListener(this);
 
     }
 
-    private void sendNotification(){
+    private void sendNotification() {
         //获取一个NotificationManager实例
-        NotificationManager manager=(NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        NotificationManager manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         //实例化通知栏构造器NotificationCompat.Builder：
-        NotificationCompat.Builder mBuilder= new NotificationCompat.Builder(this);
+        NotificationCompat.Builder mBuilder = new NotificationCompat.Builder(this);
         //PendingIntent
-        Intent intent=new Intent(this,NotificationActivity.class);
-        PendingIntent pendingIntent=PendingIntent.getActivity(this,0,intent,PendingIntent.FLAG_CANCEL_CURRENT);
+        Intent intent = new Intent(this, NotificationActivity.class);
+        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_CANCEL_CURRENT);
         //
         mBuilder.setContentTitle("YY LIVE") //通知标题
                 .setContentText("小鸡仔开播了") //通知描述
@@ -48,12 +48,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
         //发送通知请求
-        manager.notify(1,mBuilder.build());
+        manager.notify(1, mBuilder.build());
     }
+
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.send_notice:
                 sendNotification();
                 break;

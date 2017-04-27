@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private static final String TAG = MainActivity.class.getSimpleName();
     private OkHttpClient mOkHttpClient;
     private String url = "http://52.204.184.31/";
-    private String post_url = "http://52.204.184.31/pop/okhttp.xml";
+    private String post_url = "http://52.204.184.31/pop/okhttps.html";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    /**
+    /**异步请求
      * @param url
      */
     private void getAsynHttp(String url) {
@@ -101,12 +101,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
     }
 
-    /**
+    /**异步post
      *
      */
     private void postAysnHttp(String url) {
         FormBody formBody = new FormBody.Builder()
-                .add("user", "admin")
+                .add("username", "admin")
+                .add("password","123456")
                 .build();
         final Request request = new Request.Builder()
                 .url(url)
@@ -132,5 +133,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 });
             }
         });
+    }
+    /**
+     * 异步上传文件
+     */
+    private void postAsynFile(){
+
+    }
+    /**
+     * 异步下载文件
+     */
+    private void downAsynFile(){
+
     }
 }

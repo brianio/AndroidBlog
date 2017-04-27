@@ -42,5 +42,9 @@
         android:id="@+id/btn_sqlite"
         style="@style/app_btn"
         android:text="@string/btn_sqlite" />
+    <Button
+        android:id="@+id/btn_recycle_view"
+        style="@style/app_btn"
+        android:text="@string/btn_recycle_view" />
 
 </LinearLayout>

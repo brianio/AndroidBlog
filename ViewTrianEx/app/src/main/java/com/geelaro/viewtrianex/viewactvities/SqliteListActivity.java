@@ -1,4 +1,4 @@
-package com.geelaro.viewtrianex.viewact;
+package com.geelaro.viewtrianex.viewactvities;
 
 import android.database.Cursor;
 import android.net.Uri;

@@ -8,7 +8,7 @@
     android:paddingBottom="6dp"
     android:paddingLeft="6dp"
     android:paddingTop="6dp"
-    tools:context="com.geelaro.viewtrianex.viewact.GridActivity">
+    tools:context="com.geelaro.viewtrianex.viewactvities.GridActivity">
 
     <GridView
         android:id="@+id/grid_icon"
