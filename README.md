@@ -95,3 +95,7 @@ Android 通知栏Notification学习
 ## ServiceWork
 
 Android 服务Service学习
+
+## NetWork
+
+HttpURLConnection、线程、MQ和JSON解析。子线程网络请求返回数据，解析JSON数据为String，MQ更新UI。
