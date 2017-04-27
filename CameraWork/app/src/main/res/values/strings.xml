@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">CameraWork</string>
+    <string name="fail_to_get_image">Fail To Get Image</string>
+</resources>
