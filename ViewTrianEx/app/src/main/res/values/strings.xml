@@ -16,6 +16,8 @@
     <string name="btn_flipper">ViewFilpper</string>
     <string name="btn_webview">WebView</string>
     <string name="btn_sqlite">SQLite</string>
+    <string name="btn_recycle_view">RecycleView</string>
+    <string name="detail_view">DetailView</string>
     <item name="Tag_APP" type="id"></item>
     <item name="Tag_BOOK" type="id"></item>
 </resources>

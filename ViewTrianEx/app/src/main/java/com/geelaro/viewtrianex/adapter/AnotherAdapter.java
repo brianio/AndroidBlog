@@ -16,16 +16,16 @@ import java.util.ArrayList;
 /**
  * Created by Administrator on 2016/11/9.
  */
-public class MyAdapter2 extends BaseAdapter {
+public class AnotherAdapter extends BaseAdapter {
 
     private ArrayList<Icon> mData;
     private Context mContext;
     private int mLayoutRes;           //布局id
 
-    public MyAdapter2() {
+    public AnotherAdapter() {
     }
 
-    public MyAdapter2(ArrayList<Icon> mData, Context mContext) {
+    public AnotherAdapter(ArrayList<Icon> mData, Context mContext) {
         this.mData = mData;
         this.mContext = mContext;
     }

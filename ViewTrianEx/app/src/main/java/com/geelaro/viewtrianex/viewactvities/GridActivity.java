@@ -1,4 +1,4 @@
-package com.geelaro.viewtrianex.viewact;
+package com.geelaro.viewtrianex.viewactvities;
 
 import android.content.Context;
 import android.content.Intent;

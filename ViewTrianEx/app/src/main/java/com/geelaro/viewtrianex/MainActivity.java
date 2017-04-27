@@ -9,13 +9,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-import com.geelaro.viewtrianex.viewact.AutoTextViewActivity;
-import com.geelaro.viewtrianex.viewact.GridActivity;
-import com.geelaro.viewtrianex.viewact.ListViewActivity;
-import com.geelaro.viewtrianex.viewact.SpinnerActivity;
-import com.geelaro.viewtrianex.viewact.SqliteListActivity;
-import com.geelaro.viewtrianex.viewact.ViewFlipperActivity;
-import com.geelaro.viewtrianex.viewact.WebViewActivity;
+import com.geelaro.viewtrianex.viewactvities.AutoTextViewActivity;
+import com.geelaro.viewtrianex.viewactvities.GridActivity;
+import com.geelaro.viewtrianex.viewactvities.ListViewActivity;
+import com.geelaro.viewtrianex.viewactvities.RecycleViewActivity;
+import com.geelaro.viewtrianex.viewactvities.SpinnerActivity;
+import com.geelaro.viewtrianex.viewactvities.SqliteListActivity;
+import com.geelaro.viewtrianex.viewactvities.ViewFlipperActivity;
+import com.geelaro.viewtrianex.viewactvities.WebViewActivity;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -28,14 +29,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button btnToAutoTxView;
     private Button btnToViewFilpper;
     private Button btnToWebView;
-<<<<<<< HEAD
     private Button btnSqliteListView;
-=======
-<<<<<<< HEAD
-=======
-    private Button btnSqliteListView;
->>>>>>> 3ec1e9c85e62039460d9b285c6b6ac8f3184ddbf
->>>>>>> 0fc02281fb84eb8fa6f8baa93b76467c84c1a2e4
+    private Button btnRecycelView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,17 +43,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     //初始化
     private void init() {
 
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-        btnToGridView=(Button)findViewById(R.id.btn_grid_icon);
-        btnToListView=(Button)findViewById(R.id.btn_list);
-        btnToSpinner=(Button)findViewById(R.id.btn_spinner);
-        btnToAutoTxView=(Button)findViewById(R.id.btn_auto_txview);
-        btnToViewFilpper=(Button)findViewById(R.id.btn_flipper);
-        btnToWebView=(Button)findViewById(R.id.btn_webview);
-=======
->>>>>>> 0fc02281fb84eb8fa6f8baa93b76467c84c1a2e4
         btnToGridView = (Button) findViewById(R.id.btn_grid_icon);
         btnToListView = (Button) findViewById(R.id.btn_list);
         btnToSpinner = (Button) findViewById(R.id.btn_spinner);
@@ -66,10 +50,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnToViewFilpper = (Button) findViewById(R.id.btn_flipper);
         btnToWebView = (Button) findViewById(R.id.btn_webview);
         btnSqliteListView = (Button) findViewById(R.id.btn_sqlite);
-<<<<<<< HEAD
-=======
->>>>>>> 3ec1e9c85e62039460d9b285c6b6ac8f3184ddbf
->>>>>>> 0fc02281fb84eb8fa6f8baa93b76467c84c1a2e4
+        btnRecycelView=(Button) findViewById(R.id.btn_recycle_view);
 
         btnToGridView.setOnClickListener(this);
         btnToListView.setOnClickListener(this);
@@ -77,14 +58,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         btnToAutoTxView.setOnClickListener(this);
         btnToViewFilpper.setOnClickListener(this);
         btnToWebView.setOnClickListener(this);
-<<<<<<< HEAD
+
         btnSqliteListView.setOnClickListener(this);
-=======
-<<<<<<< HEAD
-=======
-        btnSqliteListView.setOnClickListener(this);
->>>>>>> 3ec1e9c85e62039460d9b285c6b6ac8f3184ddbf
->>>>>>> 0fc02281fb84eb8fa6f8baa93b76467c84c1a2e4
+        btnRecycelView.setOnClickListener(this); //go to RecycleView
+
+
     }
 
     /**
@@ -115,25 +93,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(vflpIntent);
                 break;
             case R.id.btn_webview:
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                 Intent webIntent=new Intent(this,WebViewActivity.class);
-                startActivity(webIntent);
-                break;
-=======
->>>>>>> 0fc02281fb84eb8fa6f8baa93b76467c84c1a2e4
-                Intent webIntent = new Intent(this, WebViewActivity.class);
                 startActivity(webIntent);
                 break;
             case R.id.btn_sqlite:
                 Intent sqliteIntent = new Intent(this, SqliteListActivity.class);
                 startActivity(sqliteIntent);
                 break;
-<<<<<<< HEAD
-=======
->>>>>>> 3ec1e9c85e62039460d9b285c6b6ac8f3184ddbf
->>>>>>> 0fc02281fb84eb8fa6f8baa93b76467c84c1a2e4
+            case R.id.btn_recycle_view:
+                Intent recycleIntent = new Intent(this, RecycleViewActivity.class);
+                startActivity(recycleIntent);
+                break;
             default:
                 break;
         }

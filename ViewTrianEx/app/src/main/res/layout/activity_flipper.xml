@@ -17,6 +17,5 @@
 
         <include layout="@layout/vflp_three" />
 
-
     </ViewFlipper>
 </RelativeLayout>
