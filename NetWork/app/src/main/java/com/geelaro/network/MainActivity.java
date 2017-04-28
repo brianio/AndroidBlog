@@ -1,10 +1,10 @@
 package com.geelaro.network;
 
 import android.net.Uri;
+import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -43,8 +43,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     }
                     //更新UI
                     StringBuilder str=new StringBuilder();
-                    for (String s : weatherResults) {
-                        str.append(s+"\n");
+                    for (String s : weatherResults != null ? weatherResults : new String[0]) {
+                        str.append(s).append("\n");
                     }
                     tvResponse.setText(str.toString());
             }
@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //请求按钮
         sendRequest = (Button) findViewById(R.id.send_request);
         sendRequest.setOnClickListener(this);
+
 
     }
 

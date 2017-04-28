@@ -11,6 +11,13 @@ android {
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+    allprojects {
+        repositories {
+            jcenter()
+            mavenCentral()
+            maven { url "https://dl.bintray.com/thelasterstar/maven/" }
+        }
+    }
     buildTypes {
         release {
             minifyEnabled false
@@ -30,4 +37,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
+    compile 'com.sina.weibo.sdk:core:2.0.2:openDefaultRelease@aar'
 }
