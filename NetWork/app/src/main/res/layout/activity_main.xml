@@ -12,6 +12,12 @@
         android:layout_height="wrap_content"
         android:text="Send Request"/>
 
+    <Button
+        android:id="@+id/weibo_oauth"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="授权管理"/>
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">

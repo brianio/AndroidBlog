@@ -14,7 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="left|center_vertical"
-        android:text="weibosdk_demo_obtain_token_via_sso" />
+        android:text="@string/string_obtain_token_via_sso" />
 
     <Button
         android:id="@+id/obtain_token_via_web"
@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:gravity="left|center_vertical"
-        android:text="weibosdk_demo_obtain_token_via_web" />
+        android:text="@string/string_obtain_token_via_web" />
 
     <Button
         android:id="@+id/obtain_token_via_signature"
@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:gravity="left|center_vertical"
-        android:text="weibosdk_demo_obtain_token_via_sso_all_in_one" />
+        android:text="@string/string_obtain_token_via_sso_all_in_one" />
 
     <Button
         android:id="@+id/logout"
@@ -38,7 +38,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:gravity="left|center_vertical"
-        android:text="weibosdk_demo_obtain_token_logout" />
+        android:text="@string/string_obtain_token_logout" />
 
     <Button
         android:id="@+id/refresh"

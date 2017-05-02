@@ -1,5 +1,6 @@
 package com.geelaro.network;
 
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
@@ -10,15 +11,23 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.geelaro.network.net.HttpCallbackListener;
+import com.geelaro.network.net.HttpUtil;
+import com.sina.weibo.sdk.WbSdk;
+import com.sina.weibo.sdk.auth.AuthInfo;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
+import java.net.Socket;
 import java.net.URL;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -27,6 +36,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private static final int SHOW_RESPONSE = 0;
     private Button sendRequest;
     private static final int NUMDAYS = 7;
+    //
+    private Button wBAuth;
+    //
+    private AuthInfo mAuthInfo;
 
     private Handler mHandler = new Handler() {
         @Override
@@ -55,12 +68,19 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         //返回数据
         tvResponse = (TextView) findViewById(R.id.response_text);
         //请求按钮
         sendRequest = (Button) findViewById(R.id.send_request);
         sendRequest.setOnClickListener(this);
-
+        //
+        mAuthInfo = new AuthInfo(this, Constants.APP_KEY, Constants.REDIRECT_URL, Constants.SCOPE);
+        WbSdk.install(this,mAuthInfo);
+        //
+        wBAuth=(Button)findViewById(R.id.weibo_oauth);
+        wBAuth.setOnClickListener(this);
+        
 
     }
 
@@ -70,6 +90,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.send_request:
                 getWeatherForecast();
                 break;
+            case R.id.weibo_oauth:
+                startActivity(new Intent(this,WBAuthActivity.class));
             default:
                 break;
         }

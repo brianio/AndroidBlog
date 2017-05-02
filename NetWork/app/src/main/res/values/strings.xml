@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">NetWork</string>
+    <string name="wbauth_name">微博授权</string>
+    <string name="string_obtain_token_via_sso">SSO授权</string>
+    <string name="string_obtain_token_via_web">Web授权</string>
+    <string name="string_obtain_token_via_sso_all_in_one">All in授权</string>
+    <string name="string_obtain_token_logout">登出</string>
+    <string name="weibosdk_toast_auth_success">授权登录成功</string>
+    <string name="weibosdk_toast_auth_canceled">取消授权</string>
+
+    <!--获取token-->
+    <string name="weibosdk_token_has_existed">Token 仍在有效期内，无需再次登录。</string>
+    <string name="weibosdk_token_to_string_format_1">Token：%1$s \n有效期：%2$s</string>
+
 </resources>
