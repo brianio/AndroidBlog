@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">FragmentWork</string>
+    <string name="chart_text">聊天</string>
+    <string name="contacts_text">通讯录</string>
+    <string name="news_text">动态</string>
+    <string name="settings_text">设置</string>
+
+</resources>
