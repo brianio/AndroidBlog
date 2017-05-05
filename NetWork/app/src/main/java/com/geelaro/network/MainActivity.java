@@ -11,8 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.geelaro.network.net.HttpCallbackListener;
-import com.geelaro.network.net.HttpUtil;
+import com.geelaro.network.net.SocketUtil;
 import com.sina.weibo.sdk.WbSdk;
 import com.sina.weibo.sdk.auth.AuthInfo;
 
@@ -21,13 +20,10 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
-import java.net.Socket;
 import java.net.URL;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -40,6 +36,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button wBAuth;
     //
     private AuthInfo mAuthInfo;
+    //tcp连接
+    private Button socketClient;
+    //udp 连接
+    private Button udpClient;
 
     private Handler mHandler = new Handler() {
         @Override
@@ -77,10 +77,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         //
         mAuthInfo = new AuthInfo(this, Constants.APP_KEY, Constants.REDIRECT_URL, Constants.SCOPE);
         WbSdk.install(this,mAuthInfo);
-        //
+        //授权管理
         wBAuth=(Button)findViewById(R.id.weibo_oauth);
         wBAuth.setOnClickListener(this);
-        
+        //socket TCP客户端连接
+        socketClient=(Button)findViewById(R.id.tcp_client);
+        socketClient.setOnClickListener(this);
+        //socket UDP客户端连接
+        udpClient = (Button)findViewById(R.id.udp_client);
+        udpClient.setOnClickListener(this);
 
     }
 
@@ -92,11 +97,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.weibo_oauth:
                 startActivity(new Intent(this,WBAuthActivity.class));
+                break;
+            case R.id.tcp_client:
+                    new Thread(new Runnable() {
+                        @Override
+                        public void run() {
+                            SocketUtil.tcpClient();
+                        }
+                    }).start();
+                break;
+            case R.id.udp_client:
+                new Thread(new Runnable() {
+                    @Override
+                    public void run() {
+                        SocketUtil.udpClient();
+                    }
+                }).start();
+                break;
             default:
                 break;
         }
 
     }
+
 
     private void sendRequestWithHttpURLConn() {
 
