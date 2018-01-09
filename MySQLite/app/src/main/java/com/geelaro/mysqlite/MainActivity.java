@@ -5,16 +5,21 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.geelaro.mysqlite.provider.MediaContract;
 import com.geelaro.mysqlite.provider.MySQLiteHelper;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static com.geelaro.mysqlite.provider.MediaContract.BASE_CONTENT_URI;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
@@ -53,14 +58,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.create_db:
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
                 Log.d(TAG, "Create New db");
-=======
->>>>>>> 3ec1e9c85e62039460d9b285c6b6ac8f3184ddbf
->>>>>>> 0fc02281fb84eb8fa6f8baa93b76467c84c1a2e4
-                //传统建表方法
                 dbHelper.getWritableDatabase();
                 addData();
 
@@ -109,9 +107,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
      * query data from SQLite
      */
     public void queryData() {
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
+//        SQLiteDatabase db = dbHelper.getWritableDatabase();
         String results = "";
-        Cursor cursor = db.query("news", null, null, null, null, null, null);
+        Cursor cursor = getContentResolver().query(MediaContract.NewsEntry.CONTENT_URI,null,null,
+                null,null);
         if (cursor.moveToFirst()) {
             do {
                 String title = cursor.getString(cursor.getColumnIndex("title"));
