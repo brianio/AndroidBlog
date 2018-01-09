@@ -20,4 +20,16 @@
     <string name="detail_view">DetailView</string>
     <item name="Tag_APP" type="id"></item>
     <item name="Tag_BOOK" type="id"></item>
+
+
+    <!-- API GUIDE -->
+    <!-- RelativeLayout -->
+    <string name="reminder">Reminder Name</string>
+    <string name="done">Done</string>
+
+    <!-- LinearLayout -->
+    <string name="to">TO</string>
+    <string name="subject">Subject</string>
+    <string name="message">Message</string>
+    <string name="send">Send</string>
 </resources>
