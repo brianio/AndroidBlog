@@ -1,4 +1,4 @@
-package com.brianio.wechatex.tabs;
+package com.geelaro.wechatex.tabs;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

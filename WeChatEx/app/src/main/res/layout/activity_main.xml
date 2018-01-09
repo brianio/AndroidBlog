@@ -3,18 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.brianio.wechatex.MainActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.geelaro.wechatex.MainActivity">
 
     <com.astuetz.PagerSlidingTabStrip
         android:id="@+id/tabs"
         android:layout_width="match_parent"
-        android:layout_alignParentBottom="true"
-
-        android:layout_height="40dp" />
+        android:layout_height="40dp"
+        app:pstsShouldExpand="true" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"
+        android:layout_below="@id/tabs"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="match_parent" />
 
 </RelativeLayout>

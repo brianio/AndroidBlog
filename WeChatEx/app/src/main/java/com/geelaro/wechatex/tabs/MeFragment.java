@@ -1,4 +1,4 @@
-package com.brianio.wechatex.tabs;
+package com.geelaro.wechatex.tabs;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -14,12 +14,12 @@ import android.widget.TextView;
 /**
  * Created by Brian on 2016/8/3.
  */
-public class FoundFragment extends Fragment {
+public class MeFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         DisplayMetrics dm=getResources().getDisplayMetrics();
         TextView textView = new TextView(getActivity());
-        textView.setText("发现");
+        textView.setText("我");
         textView.setGravity(Gravity.CENTER);
         textView.setTextSize(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP,6,dm));
         LinearLayout layout = new LinearLayout(getActivity());

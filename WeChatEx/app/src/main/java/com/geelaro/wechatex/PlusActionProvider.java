@@ -1,4 +1,4 @@
-package com.brianio.wechatex;
+package com.geelaro.wechatex;
 
 import android.content.Context;
 import android.view.ActionProvider;

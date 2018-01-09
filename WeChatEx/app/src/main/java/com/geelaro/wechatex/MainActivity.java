@@ -1,4 +1,4 @@
-package com.brianio.wechatex;
+package com.geelaro.wechatex;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -17,10 +17,10 @@ import android.view.Window;
 import android.widget.Toast;
 
 import com.astuetz.PagerSlidingTabStrip;
-import com.brianio.wechatex.tabs.ChatFragment;
-import com.brianio.wechatex.tabs.ContactsFragment;
-import com.brianio.wechatex.tabs.FoundFragment;
-import com.brianio.wechatex.tabs.MeFragment;
+import com.geelaro.wechatex.tabs.ChatFragment;
+import com.geelaro.wechatex.tabs.ContactsFragment;
+import com.geelaro.wechatex.tabs.FoundFragment;
+import com.geelaro.wechatex.tabs.MeFragment;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
@@ -50,6 +50,7 @@ public class MainActivity extends FragmentActivity {
         pagerTabs=(PagerSlidingTabStrip) findViewById(R.id.tabs);
         pager.setAdapter(new MyPagerAdapter(getSupportFragmentManager()));
         pagerTabs.setViewPager(pager);
+
         setTabsValue();
     }
 
@@ -58,18 +59,18 @@ public class MainActivity extends FragmentActivity {
      */
     private void setTabsValue() {
         // 设置Tab是自动填充满屏幕的
-        pagerTabs.setShouldExpand(true);
+//        pagerTabs.setShouldExpand(true);
         // 设置Tab的分割线是透明的
-        pagerTabs.setDividerColor(Color.TRANSPARENT);
+//        pagerTabs.setDividerColor(Color.TRANSPARENT);
         // 设置Tab底部线的高度
         pagerTabs.setUnderlineHeight((int) TypedValue.applyDimension(
                 TypedValue.COMPLEX_UNIT_DIP, 1, dm));
         // 设置Tab Indicator的高度
         pagerTabs.setIndicatorHeight((int) TypedValue.applyDimension(
-                TypedValue.COMPLEX_UNIT_DIP, 4, dm));
+                TypedValue.COMPLEX_UNIT_DIP, 2, dm));
         // 设置Tab标题文字的大小
         pagerTabs.setTextSize((int) TypedValue.applyDimension(
-                TypedValue.COMPLEX_UNIT_SP, 16, dm));
+                TypedValue.COMPLEX_UNIT_SP, 14, dm));
         // 设置Tab Indicator的颜色
         pagerTabs.setIndicatorColor(Color.parseColor("#45c01a"));
         // 设置选中Tab文字的颜色 (这是我自定义的一个方法)
@@ -84,7 +85,7 @@ public class MainActivity extends FragmentActivity {
             super(fm);
         }
 
-        private final String[] titles = { "聊天","发现","我" };
+        private final String[] titles = { "聊天","联系人","发现","我" };
 
         @Override
         public CharSequence getPageTitle(int position) {
@@ -111,6 +112,11 @@ public class MainActivity extends FragmentActivity {
                     }
                     return foundFragment;
                 case 2:
+                    if (contactsFragment==null){
+                        contactsFragment = new ContactsFragment();
+                    }
+                    return contactsFragment;
+                case 3:
                     if(meFragment==null){
                         meFragment=new MeFragment();
                     }
@@ -154,17 +160,17 @@ public class MainActivity extends FragmentActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater menuInflater = getMenuInflater();
         menuInflater.inflate(R.menu.main, menu);
-        return super.onCreateOptionsMenu(menu);
+        return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()){
             case R.id.action_album:
-                Toast.makeText(this,"",Toast.LENGTH_SHORT).show();
+                ShowToast.Short("Album");
                 return true;
             case R.id.action_collection:
-                Toast.makeText(this,"",Toast.LENGTH_SHORT).show();
+                ShowToast.Short("Collection");
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

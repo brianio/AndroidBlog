@@ -1,4 +1,4 @@
-package com.brianio.wechatex;
+package com.geelaro.wechatex;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

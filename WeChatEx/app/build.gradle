@@ -2,10 +2,10 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 23
-    buildToolsVersion "23.0.3"
+    buildToolsVersion '25.0.0'
 
     defaultConfig {
-        applicationId "com.brianio.wechatex"
+        applicationId "com.geelaro.wechatex"
         minSdkVersion 16
         targetSdkVersion 23
         versionCode 1

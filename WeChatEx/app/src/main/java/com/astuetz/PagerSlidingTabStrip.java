@@ -27,7 +27,7 @@ package com.astuetz;
 
         import java.util.Locale;
 
-        import com.brianio.wechatex.R;
+        import com.geelaro.wechatex.R;
 
 public class PagerSlidingTabStrip extends HorizontalScrollView {
 
