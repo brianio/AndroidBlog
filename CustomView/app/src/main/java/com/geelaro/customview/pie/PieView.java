@@ -27,11 +27,15 @@ public class PieView extends View {
 
     public PieView(Context context) {
         super(context);
+        initPaint();
     }
 
     public PieView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
+        initPaint();
 
+    }
+    void initPaint(){
         mPaint.setStyle(Paint.Style.FILL);
         mPaint.setAntiAlias(true);
     }

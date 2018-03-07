@@ -99,3 +99,9 @@ Android 服务Service学习
 ## NetWork
 
 HttpURLConnection、线程、MQ和JSON解析。子线程网络请求返回数据，解析JSON数据为String，MQ更新UI。
+
+## CustomView
+Android View自定义实现。
+
+## PhotoWall
+一个照片墙demo，利用LruCache和DiskLruCache缓存图片，加载大量图片。

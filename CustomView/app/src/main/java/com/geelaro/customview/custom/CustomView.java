@@ -116,6 +116,7 @@ public class CustomView extends View{
 
         path.arcTo(new RectF(),20,30,true);
 
+
         canvas.drawPath(path,mPaint);
 
     }
