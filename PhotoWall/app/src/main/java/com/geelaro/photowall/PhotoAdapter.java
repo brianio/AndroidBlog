@@ -105,6 +105,7 @@ public class PhotoAdapter extends ArrayAdapter<String> implements AbsListView.On
     public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
         mFirstVisibleItem = firstVisibleItem;
         mVisibleItemCount = visibleItemCount;
+        Log.d("PhotoWall", "onScroll: first:"+firstVisibleItem+",visible:"+visibleItemCount+",total:"+totalItemCount);
         //下载程序应该在onScrollStateChanged,但首次进入程序不用调用onScrollStateChanged
         //因此首次进入程序在此下载图片
         if (isFirstEnter && visibleItemCount > 0) {
@@ -117,7 +118,6 @@ public class PhotoAdapter extends ArrayAdapter<String> implements AbsListView.On
     private void loadBitmapResources(int firstVisibleItem, int visibleItemCount) {
 
         for (int i = firstVisibleItem; i < firstVisibleItem + visibleItemCount; i++) {
-
             String imageUrl = Images.imageThumbUrls[i];
             Bitmap bitmap = getBitmapFromMemoryCache(imageUrl);
             if (bitmap == null) {
